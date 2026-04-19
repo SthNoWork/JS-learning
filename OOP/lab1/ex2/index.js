@@ -1,0 +1,11 @@
+console.log("\\n".padEnd(20) + "Line break.");
+console.log("\\t".padEnd(20) + "Tabulation.");
+console.log("\\’".padEnd(20) + "Single Quote.");
+console.log("\\”".padEnd(20) + "Double Quote.");
+console.log("\\\\".padEnd(20) + "\\\ Sign");
+console.log("\\\\\\\\".padEnd(20) + "\\\\\ Sign");
+console.log("//".padEnd(20) + "Line Comment.");
+console.log("/* ... */".padEnd(20) + "Block Comment.");
+console.log('"""');
+console.log("".padEnd(20) + "Text block.");
+console.log('"""');
