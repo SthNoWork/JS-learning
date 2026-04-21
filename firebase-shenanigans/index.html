@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase CRUD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px 5px 5px 0;
+            cursor: pointer;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #feedback {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            font-weight: bold;
+            min-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Firebase CRUD Operations</h1>
+    <p id="feedback">Waiting...</p>
+
+    <!-- AUTH Section -->
+    <div class="section">
+        <h2>AUTH - Google Sign-In</h2>
+        <p id="authStatus">Not signed in</p>
+        <button id="loginBtn">Sign In With Google</button>
+        <button id="logoutBtn">Sign Out</button>
+    </div>
+
+    <!-- CREATE Section -->
+    <div class="section">
+        <h2>CREATE - Add New User</h2>
+        <input id="username" type="text" placeholder="Enter Username">
+        <input id="age" type="text" placeholder="Enter Age">
+        <input id="weight" type="text" placeholder="Enter Weight">
+        <button id="createBtn">Create User</button>
+    </div>
+
+    <!-- READ Section -->
+    <div class="section">
+        <h2>READ - Get User</h2>
+        <button id="readBtn">Read User</button>
+    </div>
+
+    <!-- UPDATE Section -->
+    <div class="section">
+        <h2>UPDATE - Modify User</h2>
+        <input id="usernameUpdate" type="text" placeholder="Enter Username">
+        <input id="ageUpdate" type="text" placeholder="Enter Age">
+        <input id="weightUpdate" type="text" placeholder="Enter Weight">
+        <button id="updateBtn">Update User</button>
+    </div>
+
+    <!-- DELETE Section -->
+    <div class="section">
+        <h2>DELETE - Remove User</h2>
+        <button id="deleteBtn">Delete User</button>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
