@@ -55,7 +55,7 @@ async function createUser() {
             age: ageInput.value,
             weight: weightInput.value
         });
-        
+
         feedbackElement.textContent = "done";
         clearForm();
     } catch (error) {
@@ -74,7 +74,7 @@ async function readUser() {
     try {
         const userRef = getUserDocRef();
         const userSnap = await getDoc(userRef);
-        
+
         if (userSnap.exists()) {
             const data = userSnap.data();
             console.log("User data:", data);
@@ -106,7 +106,7 @@ async function updateUser() {
             age: ageUpdateInput.value,
             weight: weightUpdateInput.value
         });
-        
+
         feedbackElement.textContent = "updated";
         clearUpdateForm();
     } catch (error) {
@@ -169,15 +169,15 @@ onAuthStateChanged(auth, (user) => {
 // HELPER FUNCTIONS
 // ============================================
 function validateInputs() {
-    return usernameInput.value.trim() !== "" && 
-           ageInput.value.trim() !== "" && 
-           weightInput.value.trim() !== "";
+    return usernameInput.value.trim() !== "" &&
+        ageInput.value.trim() !== "" &&
+        weightInput.value.trim() !== "";
 }
 
 function validateUpdateInputs() {
-    return usernameUpdateInput.value.trim() !== "" && 
-           ageUpdateInput.value.trim() !== "" && 
-           weightUpdateInput.value.trim() !== "";
+    return usernameUpdateInput.value.trim() !== "" &&
+        ageUpdateInput.value.trim() !== "" &&
+        weightUpdateInput.value.trim() !== "";
 }
 
 function clearForm() {
